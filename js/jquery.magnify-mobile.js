@@ -7,6 +7,7 @@
 
 (function ($) {
   // Ensure this is loaded after jquery.magnify.js
+
   if (!$.fn.magnify) return;
   // Add required CSS
   $('<style>' +
@@ -49,6 +50,7 @@
     '</style>').appendTo('head');
   // Ensure .magnify is rendered
   $(window).on('load', function () {
+
     $('body').append('<div class="magnify-mobile"><div class="lens-mobile"></div></div>');
     var $lensMobile = $('.lens-mobile');
     // Only enable mobile zoom on smartphones
@@ -94,6 +96,14 @@
           // Render zoom image
           // NOTE: In iOS background-image is url(...), not url("...").
           $lensMobile.html('<img src="' + $(this).prev('.magnify-lens').css('background-image').replace(/url\(["']?|["']?\)/g, '') + '" alt="">');
+          if (e.scale > 1) {
+            //zoom in 
+            //increase the size of image according to the e.scale
+          }
+          else if (e.scale < 1) {
+            //zoom out 
+            //decrease the size of image according to the e.scale
+          }
           // Determine zoom position
           var $magnifyImage = $(this),
             oZoomSize = $magnifyImage.data('zoomSize'),
