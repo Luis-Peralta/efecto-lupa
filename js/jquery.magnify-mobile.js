@@ -25,8 +25,8 @@
     '}' +
     '.magnify-mobile>.close {' +
     'position:fixed;' +
-    'top:50%;' +
-    'right:45%;' +
+    // 'top:50%;' +
+    // 'right:45%;' +
     'width:32px;' +
     'height:32px;' +
     'background:#333;' +
@@ -65,7 +65,7 @@
       $magnifyMobile.hide().append('<i class="close">&times;</i>');
 
       // Hook up event handlers
-      $magnifyMobile.children('.close').on($magnify.data('mobileCloseEvent'), function () {
+      $magnifyMobile.children('.lens-mobile,.close').on($magnify.data('mobileCloseEvent'), function () {
         $magnifyMobile.toggle();
         $("#view-responsibe").attr("content", "width=device-width, initial-scale=1.0 ,maximum-scale=1.0, user-scalable=no");
         $('<style>' +
