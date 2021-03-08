@@ -28,19 +28,13 @@
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="/src/product1.jpg"
-                                class="zoom img-fluid"
-                                data-magnify-src="/src/product1.jpg">
+                            <img src="/src/product1.jpg" class="zoom img-fluid" data-magnify-src="/src/product1.jpg">
                         </div>
                         <div class="swiper-slide">
-                            <img src="/src/product2.jpg"
-                                class="zoom img-fluid"
-                                data-magnify-src="/src/product2.jpg">
+                            <img src="/src/product2.jpg" class="zoom img-fluid" data-magnify-src="/src/product2.jpg">
                         </div>
                         <div class="swiper-slide">
-                            <img src="/src/product3.jpg"
-                                class="zoom img-fluid"
-                                data-magnify-src="/src/product3.jpg">
+                            <img src="/src/product3.jpg" class="zoom img-fluid" data-magnify-src="/src/product3.jpg">
                         </div>
                     </div>
                     <div class="swiper-button-next"></div>
@@ -70,9 +64,10 @@
     <script>
 
         $(document).ready(function () {
-            $('.zoom').magnify({
-                timeout:1,
-            });
+            // Enable zoom
+            var $zoom = $('.zoom').magnify();
+            // Disable zoom
+            $zoom.destroy();
         });
 
         // var image = document.querySelector('.zoom');
