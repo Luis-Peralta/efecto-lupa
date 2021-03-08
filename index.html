@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efecto Lupa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnify/2.3.3/css/magnify.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <p>Home\Footer\Redes</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row text-center">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="/img/product1.jpg" class="zoom img-fluid"
+                                data-magnify-src="/img/product1.jpg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/img/product2.jpg" class="zoom img-fluid"
+                                data-magnify-src="/img/product2.jpg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/img/product3.jpg" class="zoom img-fluid"
+                                data-magnify-src="/img/product3.jpg">
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-center py-4">
+            <h1>hola soy luis</h1>
+            <p>this is a text</p>
+            <h1>hola soy luis</h1>
+            <p>this is a text</p>
+            <h1>hola soy luis</h1>
+            <p>this is a text</p>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-2.2.4.js"
+        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnify/2.3.3/js/jquery.magnify.js"></script>
+    <script src="/jquery.magnify-mobile.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $('.zoom').magnify({
+            });
+        });
+
+        // var image = document.querySelector('.zoom');
+        // image.setAttribute("data-magnify-src", "/juego-transmision-2.jpg");
+
+
+        const swiper = new Swiper('.swiper-container', {
+            // Optional parameters
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+    </script>
+</body>
+
+</html>
