@@ -16,7 +16,7 @@
     'left:0;' +
     'width:100%;' +
     'height:100%;' +
-    'background:rgba(0,0,0,0.3);' +
+    'background:rgba(0,0,0,1);' +
     'display:none;' +
     'overflow:scroll;' +
     '-webkit-overflow-scrolling:touch;' +
@@ -43,11 +43,9 @@
     '/* Assume QHD (1440 x 2560) is highest mobile resolution */' +
     '.lens-mobile { display:block; }' +
     '}' +
-    '.lens-mobile, img{'+
-    'display: flex;'+
-    'flex-direction: column;'+
-    'justify-content: center;'+
-    '}'+
+    '.lens-mobile, img{' +
+    'padding-top:20%;' +
+    '}' +
     '</style>').appendTo('head');
   // Ensure .magnify is rendered
   $(window).on('load', function () {
@@ -108,7 +106,7 @@
             'x': (oZoomSize.width * nXPct) - (window.innerWidth / 2),
             'y': (oZoomSize.height * nYPct) - (window.innerHeight / 2)
           });
-          
+
           // Reset drag state
           $(this).data('drag', false);
         }

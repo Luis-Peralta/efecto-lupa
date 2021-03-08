@@ -16,5 +16,7 @@ body {
 
 /* .lens-mobile, img {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    
 } */
