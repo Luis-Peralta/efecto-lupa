@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,maximum-scale=1.0, user-scalable=no">
     <title>Efecto Lupa</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -28,13 +28,16 @@
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="/src/product1.jpg" class="zoom img-fluid" data-magnify-src="/src/product1.jpg" id="product1">
+                            <img src="/src/product1.jpg" class="zoom img-fluid" data-magnify-src="/src/product1.jpg" id="product1" data-elem="pinchzoomer">
                         </div>
                         <div class="swiper-slide">
                             <img src="/src/product2.jpg" class="zoom img-fluid" data-magnify-src="/src/product2.jpg">
                         </div>
                         <div class="swiper-slide">
                             <img src="/src/product3.jpg" class="zoom img-fluid" data-magnify-src="/src/product3.jpg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/src/iphone-410311.jpg" class="zoom img-fluid" data-magnify-src="/src/iphone-410311.jpg">
                         </div>
                     </div>
                     <div class="swiper-button-next"></div>
@@ -98,20 +101,7 @@
 
 
 
-        var image = document.getElementById('product1');
-
-        image.addEventListener('gesturechange', function (e) {
-
-            if (e.scale > 1) {
-                //zoom in 
-                //increase the size of image according to the e.scale 
-            }
-
-            else if (e.scale < 1) {
-                //zoom out 
-                //decrease the size of image according to the e.scale 
-            }
-        });
+        $("#product1").pinchzoomer();
     </script>
 </body>
 
