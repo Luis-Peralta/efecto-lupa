@@ -28,22 +28,23 @@
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="/img/product1.jpg" class="zoom img-fluid"
-                                data-magnify-src="/img/product1.jpg">
+                            <img src="/img/product1.jpg" class="zoom img-fluid" data-magnify-src="/img/product1.jpg">
                         </div>
                         <div class="swiper-slide">
-                            <img src="/img/product2.jpg" class="zoom img-fluid"
-                                data-magnify-src="/img/product2.jpg">
+                            <img src="/img/product2.jpg" class="zoom img-fluid" data-magnify-src="/img/product2.jpg">
                         </div>
                         <div class="swiper-slide">
-                            <img src="/img/product3.jpg" class="zoom img-fluid"
-                                data-magnify-src="/img/product3.jpg">
+                            <img src="/img/product3.jpg" class="zoom img-fluid" data-magnify-src="/img/product3.jpg">
                         </div>
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                 </div>
             </div>
+        </div>
+        <div class="container text-center">
+            <img src="https://exitocol.vtexassets.com/arquivos/ids/6721485/televisor-led-43-pulgadas-uhd-4k-smart-tv-lg-ref-43un731c0da.jpg?v=637499736557670000"
+                alt="" class="img-fluid" style="width: 50%;">
         </div>
 
         <div class="row text-center py-4">
@@ -68,6 +69,7 @@
 
         $(document).ready(function () {
             $('.zoom').magnify({
+                timeout: 1,
             });
         });
 
