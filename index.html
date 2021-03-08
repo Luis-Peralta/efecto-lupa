@@ -19,7 +19,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12">
-                <p>Home\Footer\Redes\actualizacion3</p>
+                <p>Home\Footer\Redes\actualizacion4</p>
             </div>
         </div>
 
@@ -28,17 +28,14 @@
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="/src/product1.jpg" class="zoom img-fluid" data-magnify-src="/src/product1.jpg"
-                                >
+                            <img src="/src/product1.jpg" class="zoom img-fluid" data-magnify-src="/src/product1.jpg">
                         </div>
 
                         <div class="swiper-slide">
-                            <img src="/src/product2.jpg" class="zoom img-fluid" data-magnify-src="/src/product2.jpg"
-                                >
+                            <img src="/src/product2.jpg" class="zoom img-fluid" data-magnify-src="/src/product2.jpg">
                         </div>
                         <div class="swiper-slide">
-                            <img src="/src/product3.jpg" class="zoom img-fluid" data-magnify-src="/src/product3.jpg"
-                                >
+                            <img src="/src/product3.jpg" class="zoom img-fluid" data-magnify-src="/src/product3.jpg">
                         </div>
                         <div class="swiper-slide">
                             <img src="/src/iphone-410311.jpg" class="zoom img-fluid"
@@ -70,8 +67,17 @@
         <p>this is a text</p>
     </div>
 
+    <div class="container">
+        <div class="row">
+            <img src="/src/control.jpeg" id="image">
+        </div>
+    </div>
 
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.8.17/jquery-ui.min.js"></script>
 
+    <script src="/js/jquery.ui.touch-punch.min.js"></script>
+    <script>$('#image').draggable();</script>
 
     <script src="https://code.jquery.com/jquery-2.2.4.js"
         integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
@@ -80,6 +86,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
+
         $(document).ready(function () {
             // Enable zoom
             var $zoom = $('.zoom').magnify();
