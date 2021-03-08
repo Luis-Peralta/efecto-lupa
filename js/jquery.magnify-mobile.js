@@ -24,8 +24,8 @@
     '}' +
     '.magnify-mobile>.close {' +
     'position:fixed;' +
-    'top:10px;' +
-    'right:10px;' +
+    'top:50%;' +
+    'right:45%;' +
     'width:32px;' +
     'height:32px;' +
     'background:#333;' +
@@ -43,6 +43,11 @@
     '/* Assume QHD (1440 x 2560) is highest mobile resolution */' +
     '.lens-mobile { display:block; }' +
     '}' +
+    '.lens-mobile, img{'+
+    'display: flex;'+
+    'flex-direction: column;'+
+    'justify-content: center;'+
+    '}'+
     '</style>').appendTo('head');
   // Ensure .magnify is rendered
   $(window).on('load', function () {
