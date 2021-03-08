@@ -19,7 +19,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12">
-                <p>Home\Footer\Redes\actualizacion1</p>
+                <p>Home\Footer\Redes\actualizacion2</p>
             </div>
         </div>
 
@@ -29,18 +29,20 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <img src="/src/product1.jpg" class="zoom img-fluid" data-magnify-src="/src/product1.jpg"
-                                data-elem="pinchzoomer">
+                                >
                         </div>
 
                         <div class="swiper-slide">
-                            <img src="/src/product2.jpg" class="zoom img-fluid" data-magnify-src="/src/product2.jpg" data-elem="pinchzoomer">
+                            <img src="/src/product2.jpg" class="zoom img-fluid" data-magnify-src="/src/product2.jpg"
+                                >
                         </div>
                         <div class="swiper-slide">
-                            <img src="/src/product3.jpg" class="zoom img-fluid" data-magnify-src="/src/product3.jpg" data-elem="pinchzoomer">
+                            <img src="/src/product3.jpg" class="zoom img-fluid" data-magnify-src="/src/product3.jpg"
+                                >
                         </div>
                         <div class="swiper-slide">
                             <img src="/src/iphone-410311.jpg" class="zoom img-fluid"
-                                data-magnify-src="/src/iphone-410311.jpg" data-elem="pinchzoomer">
+                                data-magnify-src="/src/iphone-410311.jpg" id="product4">
                         </div>
                     </div>
                     <div class="swiper-button-next"></div>
@@ -108,6 +110,22 @@
             scrollbar: {
                 el: '.swiper-scrollbar',
             },
+        });
+
+
+        var image = document.getElementById('product4');
+
+        image.addEventListener('gesturechange', function (e) {
+
+            if (e.scale > 1) {
+                //zoom in 
+                //increase the size of image according to the e.scale
+            }
+
+            else if (e.scale < 1) {
+                //zoom out 
+                //decrease the size of image according to the e.scale
+            }
         });
 
     </script>
