@@ -117,6 +117,10 @@
           // Reset drag state
           $(this).data('drag', false);
 
+          $('<style>' +
+            ':root {' +
+            '}' +
+            '</style>').appendTo('head');
           $(".view-responsive").attr("content", "width=device-width, initial-scale=1.0, user-scalable=yes");
         }
       });
