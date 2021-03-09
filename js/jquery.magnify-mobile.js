@@ -25,7 +25,7 @@
     '}' +
     '.magnify-mobile>.close {' +
     'position:fixed;' +
-    'top:50%;' +
+    'top:23%;' +
     // 'right:45%;' +
     'width:32px;' +
     'height:32px;' +
@@ -73,6 +73,7 @@
         $('<style>' +
           '.container-fluid {' +
           'filter:blur(0px) !important;' +
+          'position:relative;' +
           '}' +
           ':root {'+
             'touch-action: pan-x pan-y;'+
@@ -89,6 +90,7 @@
           $('<style>' +
             '.container-fluid {' +
             'filter:blur(5px) !important;' +
+            'position:fixed;' +
             '}' +
             ':root {' +
             'touch-action: auto;'+
