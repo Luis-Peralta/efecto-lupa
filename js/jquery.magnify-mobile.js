@@ -72,6 +72,10 @@
           '.container-fluid {' +
           'filter:blur(0px) !important;' +
           '}' +
+          ':root {'+
+            'touch-action: pan-x pan-y;'+
+            'height: 100%'+
+          '}'+
           '</style>').appendTo('head');
       });
       $magnify.children('img').on({
