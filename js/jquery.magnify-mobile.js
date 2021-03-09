@@ -67,7 +67,7 @@
       // Hook up event handlers
       $magnifyMobile.children('.close').on($magnify.data('mobileCloseEvent'), function () {
         $magnifyMobile.toggle();
-        $("#view-responsive").attr("content", "width=device-width, initial-scale=1.0 ,maximum-scale=1.0, user-scalable=0");
+        $(".view-responsive").attr("content", "width=device-width, initial-scale=1.0 ,maximum-scale=1.0, user-scalable=0");
         $('<style>' +
           '.container-fluid {' +
           'filter:blur(0px) !important;' +
@@ -113,7 +113,7 @@
           // Reset drag state
           $(this).data('drag', false);
 
-          $("#view-responsive").attr("content", "width=device-width, initial-scale=1.0, user-scalable=yes");
+          $(".view-responsive").attr("content", "width=device-width, initial-scale=1.0, user-scalable=yes");
         }
       });
     }
