@@ -17,7 +17,7 @@
     'left:0;' +
     'width:100%;' +
     'height:100%;' +
-    'background:rgba(0,0,0,0.5);' +
+    'background:rgba(0,0,0,1);' +
     'display:none;' +
     'overflow:scroll;' +
     '-webkit-overflow-scrolling:touch;' +
@@ -29,13 +29,15 @@
     // 'right:45%;' +
     'width:32px;' +
     'height:32px;' +
-    'background:rgba(51, 51, 51,0.5);' +
+    'background:rgba(51, 51, 51,0);' +
     'border-radius:16px;' +
     'color:#fff;' +
     'display:inline-block;' +
     'font:normal bold 20px/32px sans-serif;' +
     'letter-spacing:0;' +
     'opacity:0.8;' +
+    'display: flex;'+
+    'align-items: center;'+
     'text-align:center;' +
     'text-shadow:none;' +
     'z-index:9999;' +
@@ -62,7 +64,7 @@
       // Initiate mobile zoom
       // NOTE: Fixed elements inside a scrolling div have issues in iOS, so we need to insert the
       // close icon at the same level as the lens.
-      $magnifyMobile.hide().append('<i class="close">&times;</i>');
+      $magnifyMobile.hide().append('<i class="close"><img src="/src/row-left.png" class="img-fluid"/></i>');
 
       // Hook up event handlers
       $magnifyMobile.children('.close').on($magnify.data('mobileCloseEvent'), function () {
