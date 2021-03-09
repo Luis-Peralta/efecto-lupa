@@ -17,7 +17,7 @@
     'left:0;' +
     'width:100%;' +
     'height:100%;' +
-    'background:rgba(0,0,0,1);' +
+    'background:rgba(0,0,0,0.5);' +
     'display:none;' +
     'overflow:scroll;' +
     '-webkit-overflow-scrolling:touch;' +
@@ -92,6 +92,7 @@
             'touch-action: auto;'+
             '}' +
             '</style>').appendTo('head');
+            $(".view-responsive").attr("content", "width=device-width, initial-scale=1.0, user-scalable=yes");
           // Zoom into touch point')
           $lensMobile.scrollLeft(oScrollOffset.x);
           $lensMobile.scrollTop(oScrollOffset.y);
@@ -119,8 +120,6 @@
 
           // Reset drag state
           $(this).data('drag', false);
-
-          $(".view-responsive").attr("content", "width=device-width, initial-scale=1.0, user-scalable=yes");
         }
       });
     }
