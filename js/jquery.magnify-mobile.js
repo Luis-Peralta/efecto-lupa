@@ -25,19 +25,19 @@
     '}' +
     '.magnify-mobile>.close {' +
     'position:fixed;' +
-    'top:23%;' +
+    'top:80%;' +
     // 'right:45%;' +
     'width:32px;' +
     'height:32px;' +
-    'background:rgba(51, 51, 51,0);' +
+    //'background:rgba(51, 51, 51,0);' +
     'border-radius:16px;' +
     'color:#fff;' +
     'display:inline-block;' +
     'font:normal bold 20px/32px sans-serif;' +
     'letter-spacing:0;' +
-    'opacity:0.8;' +
-    'display: flex;'+
-    'align-items: center;'+
+    'opacity:1;' +
+    'display: flex;' +
+    'align-items: center;' +
     'text-align:center;' +
     'text-shadow:none;' +
     'z-index:9999;' +
@@ -53,7 +53,36 @@
   // Ensure .magnify is rendered
   $(window).on('load', function () {
 
-    $('body').append('<div class="magnify-mobile"><div class="lens-mobile"></div></div>');
+    $('body').append('<div class="magnify-mobile"><div class="lens-mobile">' +
+      '<div class="swiper-container2">' +
+      '<div class="swiper-wrapper"></div>' +
+      '<div class="swiper-button-next"></div>' +
+      '<div class="swiper-button-prev"></div>' +
+      '</div>' +
+      '</div></div>');
+    var $swiperMobile = $('.swiper-wrapper');
+
+    const listImage = $('.zoom');
+    for (let i = 0; i < listImage.length; i++) {
+      $swiperMobile.append('<div class="swiper-slide"><img src="' + listImage.eq(i).attr("src") + '" class="img-fluid"/></div>');
+      console.log(listImage.eq(i));
+    }
+
+    // SLIDER PARA EL CAROUSEL DEL MODAL
+    const swiper2 = new Swiper('.swiper-container2', {
+      // Optional parameters
+      loop: true,
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
     var $lensMobile = $('.lens-mobile');
     // Only enable mobile zoom on smartphones
     if ($lensMobile.is(':visible') && !!('ontouchstart' in window || (window.DocumentTouch && document instanceof DocumentTouch) || navigator.msMaxTouchPoints)) {
@@ -75,14 +104,15 @@
           'filter:blur(0px) !important;' +
           'position:relative;' +
           '}' +
-          ':root {'+
-            'touch-action: pan-x pan-y;'+
-            'height: 100%'+
-          '}'+
+          ':root {' +
+          'touch-action: pan-x pan-y;' +
+          'height: 100%' +
+          '}' +
           '</style>').appendTo('head');
       });
       $magnify.children('img').on({
         'touchend': function () {
+
           // Only execute on tap
           if ($(this).data('drag')) return;
           var oScrollOffset = $(this).data('scrollOffset');
@@ -93,10 +123,10 @@
             'position:fixed;' +
             '}' +
             ':root {' +
-            'touch-action: auto;'+
+            'touch-action: auto;' +
             '}' +
             '</style>').appendTo('head');
-            $(".view-responsive").attr("content", "width=device-width, initial-scale=1.0, user-scalable=yes");
+          $(".view-responsive").attr("content", "width=device-width, initial-scale=1.0, user-scalable=yes");
           // Zoom into touch point')
           $lensMobile.scrollLeft(oScrollOffset.x);
           $lensMobile.scrollTop(oScrollOffset.y);
@@ -108,8 +138,18 @@
         'touchstart': function (e) {
           // Render zoom image
           // NOTE: In iOS background-image is url(...), not url("...").
-          $lensMobile.html('<img src="' + $(this).prev('.magnify-lens').css('background-image').replace(/url\(["']?|["']?\)/g, '') + '" class="img-fluid">');
+
+          // const listImage = $('.zoom');
+          // for (let i = 0; i < listImage.length ; i++){
+          //   $swiperMobile.append('<div class="swiper-slide2"><img src="' + listImage.eq(i) + '" class="img-fluid"/></div>');
+          //   console.log(listImage.eq(i));
+          // }
+
+          //$swiperMobile.html('<img src="' + $(this).prev('.magnify-lens').css('background-image').replace(/url\(["']?|["']?\)/g, '') + '" class="img-fluid">');
           // Determine zoom position
+
+
+
           var $magnifyImage = $(this),
             oZoomSize = $magnifyImage.data('zoomSize'),
             nX = e.originalEvent.touches[0].pageX - $magnifyImage.offset().left,
