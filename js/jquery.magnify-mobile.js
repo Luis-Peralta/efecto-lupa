@@ -71,7 +71,7 @@
     // SLIDER PARA EL CAROUSEL DEL MODAL
     const swiper2 = new Swiper('.swiper-container2', {
       // Optional parameters
-      loop: true,
+      //loop: true,
 
       // If we need pagination
       pagination: {
