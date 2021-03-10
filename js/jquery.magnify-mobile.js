@@ -53,7 +53,7 @@
   // Ensure .magnify is rendered
   $(window).on('load', function () {
 
-    $('body').append('<div class="magnify-mobile"><div class="lens-mobile">' +
+    $('body').append('<div class="magnify-mobile" style="position:fixed;"><div class="lens-mobile">' +
       '<div class="swiper-container2">' +
       '<div class="swiper-wrapper"></div>' +
       '<div class="swiper-button-next"></div>' +
