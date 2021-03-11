@@ -7,7 +7,6 @@
 
 (function ($) {
   // Ensure this is loaded after jquery.magnify.js
-
   if (!$.fn.magnify) return;
   // Add required CSS
   $('<style>' +
@@ -45,7 +44,7 @@
     '@media only screen and (min-device-width:320px) and (max-device-width:773px) {' +
     '/* Assume QHD (1440 x 2560) is highest mobile resolution */' +
     '.lens-mobile { display:block;visibility:visible;transition:1s; }' +
-    '.magnify-mobile { visibility:visible !important; }'+
+    '.magnify-mobile { visibility:visible !important; transition:1s !important; }'+
     '}' +
     '.lens-mobile, img{' +
     'padding-top:20%;' +
@@ -57,7 +56,7 @@
   $(window).on('load', function () {
 
     $('body').append('<div class="magnify-mobile" style="visibility:hidden;"><div class="lens-mobile">' +
-      '<div class="swiper-container">' +
+      '<div class="swiper-container swiper-mobile">' +
       '<div class="swiper-wrapper" id="swiper-Mobile"></div>' +
       '<div class="swiper-button-next"></div>' +
       '<div class="swiper-button-prev"></div>' +
@@ -72,10 +71,9 @@
     }
 
     // SLIDER PARA EL CAROUSEL DEL MODAL
-    const swiper2 = new Swiper('.swiper-container', {
+    const swiper2 = new Swiper('.swiper-mobile', {
       // Optional parameters
       //loop: true,
-
       // If we need pagination
       // pagination: {
       //   el: '.swiper-pagination',
