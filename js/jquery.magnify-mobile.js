@@ -47,7 +47,7 @@
     '.magnify-mobile { visibility:visible !important; transition:1s !important; }'+
     '}' +
     '.lens-mobile, img{' +
-    'padding-top:15%;' +
+    'padding-top:8%;' +
     'display: flex;' +
     'align-items: center;' +
     '}' +
@@ -66,7 +66,7 @@
 
     const listImage = $('.zoom');
     for (let i = 0; i < listImage.length; i++) {
-      $swiperMobile.append('<div class="swiper-slide"><p class="px-2" style="color:white;padding-top:8%;position:absolute;">'+(i+1)+' / '+listImage.length +'</p><img src="' + listImage.eq(i).attr("src") + '" class="img-fluid" /></div>');
+      $swiperMobile.append('<div class="swiper-slide"><p class="px-2" style="padding-top:8%;position:absolute;">'+(i+1)+' / '+listImage.length +'</p><img src="' + listImage.eq(i).attr("src") + '" class="img-fluid" /></div>');
       console.log("/" + i.length);
     }
 
@@ -78,7 +78,7 @@
       // pagination: {
       //   el: '.swiper-pagination',
       // },
-
+      spaceBetween: 35,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
