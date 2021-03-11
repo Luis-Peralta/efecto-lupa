@@ -17,7 +17,7 @@
     'left:0;' +
     'width:100%;' +
     'height:100%;' +
-    'background:rgba(0,0,0,0.1);' +
+    'background:rgba(0,0,0,1);' +
     'display:none;' +
     'overflow:scroll;' +
     '-webkit-overflow-scrolling:touch;' +
@@ -44,7 +44,8 @@
     '}' +
     '@media only screen and (min-device-width:320px) and (max-device-width:773px) {' +
     '/* Assume QHD (1440 x 2560) is highest mobile resolution */' +
-    '.lens-mobile { display:block; }' +
+    '.lens-mobile { display:block;visibility:visible;transition:1s; }' +
+    '.magnify-mobile { visibility:visible !important; }'+
     '}' +
     '.lens-mobile, img{' +
     'padding-top:20%;' +
@@ -55,7 +56,7 @@
   // Ensure .magnify is rendered
   $(window).on('load', function () {
 
-    $('body').append('<div class="magnify-mobile" style="position:fixed;"><div class="lens-mobile">' +
+    $('body').append('<div class="magnify-mobile" style="visibility:hidden;"><div class="lens-mobile">' +
       '<div class="swiper-container">' +
       '<div class="swiper-wrapper" id="swiper-Mobile"></div>' +
       '<div class="swiper-button-next"></div>' +
