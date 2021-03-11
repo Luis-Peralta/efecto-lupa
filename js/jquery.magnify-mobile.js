@@ -48,6 +48,8 @@
     '}' +
     '.lens-mobile, img{' +
     'padding-top:20%;' +
+    'display: flex;' +
+    'align-items: center;' +
     '}' +
     '</style>').appendTo('head');
   // Ensure .magnify is rendered
