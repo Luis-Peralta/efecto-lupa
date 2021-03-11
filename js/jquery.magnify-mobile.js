@@ -74,9 +74,9 @@
       //loop: true,
 
       // If we need pagination
-      pagination: {
-        el: '.swiper-pagination',
-      },
+      // pagination: {
+      //   el: '.swiper-pagination',
+      // },
 
       navigation: {
         nextEl: '.swiper-button-next',
