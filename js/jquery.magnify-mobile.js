@@ -66,8 +66,8 @@
 
     const listImage = $('.zoom');
     for (let i = 0; i < listImage.length; i++) {
-      $swiperMobile.append('<div class="swiper-slide"><img src="' + listImage.eq(i).attr("src") + '" class="img-fluid" /></div>');
-      console.log(listImage.eq(i));
+      $swiperMobile.append('<div class="swiper-slide"><p class="px-2" style="color:white;">'+(i+1)+' / '+listImage.length +'</p><img src="' + listImage.eq(i).attr("src") + '" class="img-fluid" /></div>');
+      console.log("/" + i.length);
     }
 
     // SLIDER PARA EL CAROUSEL DEL MODAL
