@@ -26,7 +26,7 @@
     'position:fixed;' +
     'top:80%;' +
     // 'right:45%;' +
-    'width:32px;' +
+    'width:50px;' +
     'height:32px;' +
     //'background:rgba(51, 51, 51,0);' +
     'border-radius:16px;' +
@@ -47,7 +47,7 @@
     '.magnify-mobile { visibility:visible !important; transition:1s !important; }'+
     '}' +
     '.lens-mobile, img{' +
-    'padding-top:20%;' +
+    'padding-top:15%;' +
     'display: flex;' +
     'align-items: center;' +
     '}' +
@@ -66,7 +66,7 @@
 
     const listImage = $('.zoom');
     for (let i = 0; i < listImage.length; i++) {
-      $swiperMobile.append('<div class="swiper-slide"><p class="px-2" style="color:white;">'+(i+1)+' / '+listImage.length +'</p><img src="' + listImage.eq(i).attr("src") + '" class="img-fluid" /></div>');
+      $swiperMobile.append('<div class="swiper-slide"><p class="px-2" style="color:white;padding-top:8%;position:absolute;">'+(i+1)+' / '+listImage.length +'</p><img src="' + listImage.eq(i).attr("src") + '" class="img-fluid" /></div>');
       console.log("/" + i.length);
     }
 
@@ -94,7 +94,7 @@
       // Initiate mobile zoom
       // NOTE: Fixed elements inside a scrolling div have issues in iOS, so we need to insert the
       // close icon at the same level as the lens.
-      $magnifyMobile.hide().append('<i class="close"><img src="/src/row-left.png" class="img-fluid"/></i>');
+      $magnifyMobile.hide().append('<i class="close"><img src="/src/row-left.png" class="img-fluid px-2"/></i>');
 
       // Hook up event handlers
       $magnifyMobile.children('.close').on($magnify.data('mobileCloseEvent'), function () {
