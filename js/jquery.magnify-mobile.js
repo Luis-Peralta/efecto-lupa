@@ -17,7 +17,7 @@
     'left:0;' +
     'width:100%;' +
     'height:100%;' +
-    'background:rgba(0,0,0,1);' +
+    'background:rgba(0,0,0,0.1);' +
     'display:none;' +
     'overflow:scroll;' +
     '-webkit-overflow-scrolling:touch;' +
@@ -55,16 +55,16 @@
 
     $('body').append('<div class="magnify-mobile" style="position:fixed;"><div class="lens-mobile">' +
       '<div class="swiper-container2">' +
-      '<div class="swiper-wrapper"></div>' +
+      '<div class="swiper-wrapper" id="swiper-Mobile"></div>' +
       '<div class="swiper-button-next"></div>' +
       '<div class="swiper-button-prev"></div>' +
       '</div>' +
       '</div></div>');
-    var $swiperMobile = $('.swiper-wrapper');
+    var $swiperMobile = $('#swiper-Mobile');
 
     const listImage = $('.zoom');
     for (let i = 0; i < listImage.length; i++) {
-      $swiperMobile.append('<div class="swiper-slide"><img src="' + listImage.eq(i).attr("src") + '" class="img-fluid"/></div>');
+      $swiperMobile.append('<div class="swiper-slide"><img src="' + listImage.eq(i).attr("src") + '" class="img-fluid" /></div>');
       console.log(listImage.eq(i));
     }
 
