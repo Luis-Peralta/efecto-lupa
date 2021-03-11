@@ -54,7 +54,7 @@
   $(window).on('load', function () {
 
     $('body').append('<div class="magnify-mobile" style="position:fixed;"><div class="lens-mobile">' +
-      '<div class="swiper-container2">' +
+      '<div class="swiper-container">' +
       '<div class="swiper-wrapper" id="swiper-Mobile"></div>' +
       '<div class="swiper-button-next"></div>' +
       '<div class="swiper-button-prev"></div>' +
@@ -69,7 +69,7 @@
     }
 
     // SLIDER PARA EL CAROUSEL DEL MODAL
-    const swiper2 = new Swiper('.swiper-container2', {
+    const swiper2 = new Swiper('.swiper-container', {
       // Optional parameters
       //loop: true,
 
