@@ -2,16 +2,22 @@
     var $pswp = $('.pswp')[0];
     var image = [];
 
-    $('.swiper-wrapper').each(function () {
+    console.log(image);
+
+    $('.swiper-container').each(function () {
         var $pic = $(this),
             getItems = function () {
                 var items = [];
                 $pic.find('img').each(function () {
                     var $href = $(this).attr('src'),
                         $size = $(this).data('size').split('x'),
-                        $width = $size[0],
-                        $height = $size[1];
-
+                        
+                        // $width = $size[0],
+                        // $height = $size[1];
+                        //esto nos da el tamaño real de cada imagen:
+                        $width = this.naturalWidth,
+                        $height = this.naturalHeight;
+                
                     var item = {
                         src: $href,
                         w: $width,
