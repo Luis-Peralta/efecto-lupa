@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnify/2.3.3/css/magnify.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/dist/photoswipe.css">
+    <link rel="stylesheet" href="/dist/default-skin/default-skin.css">
 </head>
 
 <body>
@@ -38,7 +40,7 @@
 
         <div class="row">
             <div class="col-xs-12">
-                <p>Home\Footer\Redes\actualizacion35</p>
+                <p>Home\Footer\Redes\actualizacion36-con-photoswipe</p>
             </div>
         </div>
 
@@ -47,17 +49,28 @@
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="/src/product1.jpg" class="zoom img-fluid" data-magnify-src="/src/product1.jpg">
+                            <figure itemprop="associatedMedia">
+                                <img src="/src/product1.jpg" class="zoom img-fluid" data-size="1000x1000"
+                                    data-magnify-src="/src/product1.jpg">
+                            </figure>
                         </div>
                         <div class="swiper-slide">
-                            <img src="/src/product2.jpg" class="zoom img-fluid" data-magnify-src="/src/product2.jpg">
+                            <figure itemprop="associatedMedia">
+                                <img src="/src/product2.jpg" class="zoom img-fluid" data-size="1000x1000"
+                                    data-magnify-src="/src/product2.jpg">
+                            </figure>
                         </div>
                         <div class="swiper-slide">
-                            <img src="/src/product3.jpg" class="zoom img-fluid" data-magnify-src="/src/product3.jpg">
+                            <figure itemprop="associatedMedia">
+                                <img src="/src/product3.jpg" class="zoom img-fluid" data-size="1000x1000"
+                                    data-magnify-src="/src/product3.jpg">
+                            </figure>
                         </div>
                         <div class="swiper-slide">
-                            <img src="/src/iphone-410311.jpg" class="zoom img-fluid"
-                                data-magnify-src="/src/iphone-410311.jpg">
+                            <figure itemprop="associatedMedia">
+                                <img src="/src/iphone-410311.jpg" class="zoom img-fluid" data-size="1000x1000"
+                                    data-magnify-src="/src/iphone-410311.jpg">
+                            </figure>
                         </div>
                     </div>
                     <div class="swiper-button-next"></div>
@@ -91,10 +104,54 @@
 
 
 
+
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                </button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                </button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/dist/photoswipe.min.js"></script>
+    <script src="/dist/photoswipe-ui-default.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.2.4.js"
         integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnify/2.3.3/js/jquery.magnify.js"></script>
-    <script src="/js/jquery.magnify-mobile.js"></script>
+    <!-- <script src="/js/jquery.magnify-mobile.js"></script> -->
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
@@ -143,6 +200,7 @@
 
 
     </script>
+    <script src="/js/swiper-prueba.js"></script>
 </body>
 
 </html>
