@@ -40,7 +40,7 @@
 
         <div class="row">
             <div class="col-xs-12">
-                <p>Home\Footer\Redes\actualizacion37-con-PSWP</p>
+                <p>Home\Footer\Redes\actualizacion38-con-PSWP</p>
             </div>
         </div>
 
@@ -68,8 +68,8 @@
                         </div>
                         <div class="swiper-slide" id="3">
                             <figure itemprop="associatedMedia">
-                                <img src="/src/iphone-410311.jpg" class="zoom img-fluid" data-size="1000x1000" data-index="3"
-                                    data-magnify-src="/src/iphone-410311.jpg">
+                                <img src="/src/iphone-410311.jpg" class="zoom img-fluid" data-size="1000x1000"
+                                    data-index="3" data-magnify-src="/src/iphone-410311.jpg">
                             </figure>
                         </div>
                     </div>
@@ -163,15 +163,10 @@
 
         $(document).ready(function () {
             // Enable zoom
-            var $zoom = $('.zoom').magnify();
-            // Disable zoom
-            $zoom.destroy();
+            if ($(window).width() >= 768) {
+                var $zoom = $('.zoom').magnify();
+            }
         });
-
-        // var image = document.querySelector('.zoom');
-        // image.setAttribute("data-magnify-src", "/juego-transmision-2.jpg");
-
-
 
         const swiper = new Swiper('.swiper-container', {
             // Optional parameters

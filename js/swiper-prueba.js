@@ -35,7 +35,7 @@
         $pic.on('click', 'figure', function (event) {
             event.preventDefault();
 
-            //para obtener el valor
+            //para obtener el valor del id del que esta activo
             var indice = parseInt($('.swiper-slide-active').attr("id"));
             var $index = indice
             console.log($index)
